@@ -1,0 +1,82 @@
+.container1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    padding-bottom: 0.9rem;
+}
+
+.container1 h1 {
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.chats {
+    height: 83.5vh;
+    max-width: 750px;
+    /* overflow-y: auto; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y:auto !important;
+}
+.chats::-webkit-scrollbar {
+    display: none;
+}
+
+.userDiv {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f2f0f0;
+    border-radius: 25px;
+    margin-left: auto;
+    max-width: 500px;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+}
+
+.userMsg {
+    background-color: #f2f0f0;
+    padding-inline: 1.5rem;
+    border-radius: 25px;
+    max-width: 452px;
+    text-align: left;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.modelDiv {
+    text-align: left;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.loader {
+    margin-bottom:2rem;
+    text-align: left;
+}
+
+.hljs span {
+  background: transparent !important;
+}
+
+.hljs {
+  border-radius: 1rem !important;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+@media (prefers-color-scheme: dark) {
+    .userDiv {
+        background-color: #2a2a2a;
+    }
+    .userMsg {
+        background-color: #2a2a2a;
+        color: #E3E3E3;
+    }
+}

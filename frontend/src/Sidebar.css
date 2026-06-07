@@ -1,0 +1,135 @@
+.sidebar {
+    background-color: white;
+    position: fixed;
+    color: black;
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+@media (prefers-color-scheme: dark) {
+    .sidebar{
+        background-color: #2a2a2a;
+        color: #E6E6E6;
+    }
+}
+
+.logo {
+    height: 2.25rem;
+    width: 2.25rem;
+    object-fit: cover;
+}
+
+.brand {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-inline: 1rem;
+    margin-block: 0.25rem;
+    background-color: transparent;
+}
+
+.brand span {
+    background-color: transparent ;
+}
+
+.brand p {
+    font-weight: 500;
+    background-color: transparent ;
+}
+
+.newChat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-inline: 0.5rem;
+    padding-inline: 0.5rem;
+    font-size: 0.85rem;
+    border-radius: 1.25rem;
+    background-color: transparent ;
+}
+
+.newChat span, .newChat p {
+    background-color: transparent ;
+    font-weight: 450;
+}
+
+.newChat:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+@media (prefers-color-scheme: dark) {
+    .newChat:hover {
+    background-color: #131314;
+    cursor: pointer;
+    }
+}
+
+.recent {
+    overflow-y: auto;
+    height:80%;
+    background-color: transparent;
+    overflow-x:hidden;
+}
+
+.recent p {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+    font-weight: 300;
+    background-color: transparent;
+}
+
+.history {
+    list-style-type: none;
+    margin-left: -1.85rem;
+    background-color: transparent;
+    width: 100%;
+}
+
+.history li {
+    padding-block: 0.5rem;
+    padding-inline: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 450;
+    background-color: transparent;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.history li:hover{
+    cursor: pointer;
+    background-color: #f8f9fa;
+}
+
+.history li i{
+    background-color: transparent;
+}
+
+.history li i:hover {
+    color:red;
+}
+
+.sign, .sign p{
+    background-color: transparent;
+    text-align: center;
+}
+
+.history li.highlighted {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+    .history li:hover{
+        cursor: pointer;
+        background-color: #131314;
+        opacity: 0.4;
+    }
+    .history li.highlighted {
+        background-color: #131314;
+        font-weight: bold;
+    }
+}

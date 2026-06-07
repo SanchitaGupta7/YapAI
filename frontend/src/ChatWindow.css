@@ -1,0 +1,88 @@
+.chatWindow{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+    margin-left: 300px;
+}
+
+.chatInput {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.inputBox {
+    width:100%;
+    position: relative;
+    max-width: 675px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+    padding-inline: 1.2rem;
+    background-color: white;
+}
+@media (prefers-color-scheme: dark) {
+    .inputBox{
+        background-color: #2a2a2a;
+    }
+}
+
+input {
+    width:100%;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    padding-block: 1.2rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+.info {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.85rem;
+}
+
+.inputBox i {
+    font-size: 2.2rem;
+    background-color: white;
+}
+@media (prefers-color-scheme: dark) {
+    .inputBox i {
+    font-size: 2.2rem;
+    background-color: #2a2a2a;
+    }
+    .info {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .scaleLoader {
+        background-color: #2a2a2a;
+    }
+}
+
+.inputBox i:hover {
+    cursor: pointer;
+}
+
+#submit{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+#submit .fa-microphone, #submit .fa-stop{
+    font-size: 1.5rem;
+}
+
+.scaleLoader {
+    margin-inline:auto;
+    padding: 1rem;
+}

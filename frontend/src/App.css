@@ -1,0 +1,21 @@
+*{
+    background-color: #f8f9fa;
+    color: #1F1F1F;
+    font-family: 'Google Sans', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+    * {
+        background-color: #131314;
+        color: #E3E3E3;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+.app {
+    display: flex;
+}
