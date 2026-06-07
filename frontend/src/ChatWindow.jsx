@@ -28,7 +28,7 @@ function ChatWindow() {
 
       mediaRecorder.onstop = async () => {
         const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
-        const response = await fetch("http://localhost:9090/api/audio", {
+        const response = await fetch("https://yapaibackend.onrender.com/audio", {
             method: "POST",
             headers: { "Content-Type": "application/octet-stream" },
             body: audioBlob
@@ -64,7 +64,7 @@ function ChatWindow() {
       })
     };
     try {
-      const response = await fetch("http://localhost:9090/api/chat", options);
+      const response = await fetch("https://yapaibackend.onrender.com/chat", options);
       const res = await response.json();
       setReply(res.reply);
     }catch(err) {

@@ -10,7 +10,7 @@ function Sidebar() {
     e.stopPropagation();
     try{
       if(!threadId) return;
-      await fetch(`http://localhost:9090/api/thread/${threadId}`, {
+      await fetch(`https://yapaibackend.onrender.com/thread/${threadId}`, {
         method:"DELETE"
       });
       setAllThreads(prev=>prev.filter(thread=>thread.threadId!==threadId));
@@ -24,7 +24,7 @@ function Sidebar() {
   const changeThread= async (threadId)=>{
     setCurrThreadId(threadId);
     try{
-      const response= await fetch(`http://localhost:9090/api/thread/${threadId}`);
+      const response= await fetch(`https://yapaibackend.onrender.com/thread/${threadId}`);
       const res = await response.json();
       const formattedRes= res.map((msg)=>({role:msg.role, message:msg.content}))
       setPrevChats(formattedRes);
@@ -45,7 +45,7 @@ function Sidebar() {
 
   const getAllThreads = async () => {
     try{
-      const response = await fetch("http://localhost:9090/api/thread");
+      const response = await fetch("https://yapaibackend.onrender.com/thread");
       const res = await response.json();
       const filteredRes = res.map(thread=>({threadId:thread.threadId, title:thread.title}));
       setAllThreads(filteredRes);
